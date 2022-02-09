@@ -14,9 +14,11 @@ const MainPage = () => {
         })
     }, [])
 
+
     return (
         <div className={css.all_dark}>
             MainPage
+
         </div>
     );
 };
