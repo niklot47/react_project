@@ -1,0 +1,44 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    box-sizing: border-box;
+}
+
+.card:hover .title{
+    height: 50px;
+    margin-top: -50px;
+}
+
+.card:hover .info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.img {
+
+}
+
+.title {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    height: 40px;
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.info{
+    display: none;
+}
+
+.name{
+    height: 20px;
+    overflow-y: hidden;
+}

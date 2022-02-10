@@ -1,0 +1,13 @@
+.all_dark{
+    padding: 20px 100px;
+    height: 100%;
+
+    color: snow;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    row-gap: 15px;
+}
+
