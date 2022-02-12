@@ -1,16 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useNavigate, useParams} from "react-router-dom";
-import {movieService} from "../../services/movie.service";
+import {useNavigate, useParams} from "react-router-dom";
+import ReactStars from "react-stars";
 
 import css from './MovieDetails.module.css'
 import {imgUrl} from "../../config/imgUrl";
+import {movieService} from "../../services/movie.service";
 import noimg from "../../img/noimg.png";
 import SimilarMovie from "../../components/SimilarMovie/SimilarMovie";
 import SameGenres from "../../components/SameGenres/SameGenres";
-import ReactStars from "react-stars";
 
 const MovieDetails = () => {
-
     const {id} = useParams()
     const [movie, setMovie] = useState(null);
     const navigate = useNavigate();
@@ -91,8 +90,6 @@ const MovieDetails = () => {
                             </div>)}
                         </div>
                     </div>
-
-
                     <p><b>Overview:</b> {movie.overview}</p>
                 </div>
             </div>

@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
+import {Link} from "react-router-dom";
+
 import {movieService} from "../../services/movie.service";
 import css from "../SimilarMovie/SimilarMovie.module.css";
-import {Link} from "react-router-dom";
 import MovieListCard from "../MovieListCard/MovieListCard";
 
 const SameGenres = ({genres}) => {
@@ -21,7 +22,6 @@ const SameGenres = ({genres}) => {
         let page =1;
         movieService.getMovieByGenres({genres: genresString, page}).then(value => {
             setSimilarMovie(value.results.slice(0, 8));
-            // console.log(value);
         });
     }, [genres])
 

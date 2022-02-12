@@ -16,7 +16,6 @@ const SimilarMovie = ({id}) => {
         });
     }, [id])
 
-
     return (
         <div className={css.all}>
             <h3>Similar movie:</h3>

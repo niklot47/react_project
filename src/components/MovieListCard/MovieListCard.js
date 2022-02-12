@@ -1,9 +1,9 @@
 import React from 'react';
+import ReactStars from "react-stars/dist/react-stars";
 
 import css from './MovieListCard.module.css'
-import {imgUrl} from "../../config/imgUrl";
 import noimg from '../../img/noimg.png'
-import ReactStars from "react-stars/dist/react-stars";
+import {imgUrl} from "../../config/imgUrl";
 
 const MovieListCard = ({movie}) => {
     return (

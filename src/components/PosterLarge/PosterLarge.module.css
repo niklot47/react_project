@@ -75,34 +75,16 @@
 }
 
 .topMovie{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     margin-bottom: 20px;
     width: 90vw;
     box-sizing: border-box;
     padding: 20px;
+
     background: var(--shadow-light);
+
 }
 
-.topMovieWrap{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.topMovieHeader h2{
-    margin: 0;
-}
-
-.topMovieHeader a{
-    padding-bottom: 1px;
-    font-size: 18px;
-    color: var(--bg-color-1);
-    text-decoration: underline;
-}
-
-.topMovieHeader{
-    display: flex;
-    gap: 20px;
-    align-items: end;
-
-    margin-bottom: 20px;
-}

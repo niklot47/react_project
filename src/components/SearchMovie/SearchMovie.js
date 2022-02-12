@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {saveSearchKey, searchMovieThunk} from "../../stor";
+import {NavLink} from "react-router-dom";
 
 import css from './SearchMovie.module.css'
-import {NavLink} from "react-router-dom";
 
 
 const SearchMovie = () => {

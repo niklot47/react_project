@@ -1,4 +1,5 @@
 import React from 'react';
+
 import css from './Pages.module.css'
 
 const Pages = ({page, setPage, pages}) => {
@@ -15,5 +16,3 @@ const Pages = ({page, setPage, pages}) => {
 };
 
 export default Pages;
-
-//  &lt;&lt;

@@ -9,6 +9,3 @@ export const genreService = {
         }
     }).then(value => value.data)
 }
-
-
-//https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>
