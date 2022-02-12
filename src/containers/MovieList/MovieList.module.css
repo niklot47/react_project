@@ -2,12 +2,17 @@
     padding: 20px 100px;
     height: 100%;
 
-    color: snow;
+    color: var(--text-light);
 
     display: flex;
     flex-wrap: wrap;
 
+    align-items: start;
     justify-content: space-between;
     row-gap: 15px;
+}
+
+.search{
+    margin: 0 auto;
 }
 

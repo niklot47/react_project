@@ -1,4 +1,6 @@
 .card {
+    color: var(--text-middle);
+
     display: flex;
     flex-direction: column;
     width: 20vw;
@@ -15,6 +17,7 @@
     justify-content: space-between;
     font-size: 14px;
     gap: 20px;
+
 }
 
 .img {
@@ -22,8 +25,9 @@
 }
 
 .title {
+
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--shadow-light);
     height: 40px;
     margin-top: -40px;
     display: flex;
@@ -41,4 +45,8 @@
 .name{
     height: 20px;
     overflow-y: hidden;
+}
+
+.rt{
+    margin: 0 auto;
 }

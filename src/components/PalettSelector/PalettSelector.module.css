@@ -1,0 +1,16 @@
+.clr {
+    font-size: 18px;
+    color: var(--text-light);
+}
+
+.clr select {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--text-light);
+}
+
+.clr_opt{
+    background-color: var(--bg-color-4);
+}

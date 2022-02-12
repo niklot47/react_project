@@ -5,13 +5,15 @@ const Pages = ({page, setPage, pages}) => {
     return (
         <div className={css.pages}>
             Page:
-            <a href="#" onClick={()=>setPage(1)}>1&lt;&lt;</a>
+            <a href="#" onClick={()=>setPage(1)}>1</a>
             <a href="#" onClick={()=>setPage(page-1===0?1:page-1)}>&lt;</a>
             <a href="#">{page}</a>
             <a href="#" onClick={()=>setPage(page+1>pages?pages:page+1)}>&gt;</a>
-            <a href="#" onClick={()=>setPage(pages)}>&gt;&gt;{pages}</a>
+            <a href="#" onClick={()=>setPage(pages)}>{pages}</a>
         </div>
     );
 };
 
 export default Pages;
+
+//  &lt;&lt;

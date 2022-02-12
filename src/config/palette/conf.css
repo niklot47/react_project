@@ -1,0 +1,18 @@
+:root{
+    --bg-color-1: #D0E1F9;
+    --bg-color-2: #4D648D;
+    --bg-color-3: #283655;
+    --bg-color-4: #1E1F26;
+
+    --text-dark: #1E1F26;
+    --text-middle: #D0E1F9;
+    --text-light: #eff6f6;
+
+    --shadow-dark: rgba(0, 0, 0, 0.93);
+    --shadow-light: rgba(0, 0, 0, 0.37);
+    --shadow-lightest: rgba(0, 0, 0, 0.04);
+}
+
+:root{
+    font-family: Verdana, serif;
+}
