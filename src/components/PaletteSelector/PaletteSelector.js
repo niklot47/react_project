@@ -1,9 +1,9 @@
 import React from 'react';
 
-import css from "./PalettSelector.module.css";
+import css from "./PaletteSelector.module.css";
 import {setColorID} from "../../config/palette/colors";
 
-const PalettSelector = () => {
+const PaletteSelector = () => {
     return (
         <div>
             <form onSubmit={e=>e.preventDefault()} className={css.clr}>
@@ -19,4 +19,4 @@ const PalettSelector = () => {
     );
 };
 
-export default PalettSelector;
+export default PaletteSelector;
