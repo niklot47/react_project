@@ -8,7 +8,7 @@ import css from './GeneresDropDown.module.css'
 const GeneresDropDown = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {genres, status, error} = useSelector(state => state['genreReducer']);
+    const {genres} = useSelector(state => state['genreReducer']);
 
     useEffect(() => {
         dispatch(getAllGenres())
@@ -17,11 +17,15 @@ const GeneresDropDown = () => {
     return (
         <form onSubmit={e => e.preventDefault()} className={css.genre}>
             <select onChange={(e) => {
-                let str = '/main/search_undefined/' + e.target.value;
-                const genreMovie = () => navigate(str);
-                console.log(genres);
-                genreMovie();
+                if(e.target.value !== 'select'){
+                    let str = '/main/search_undefined/' + e.target.value;
+                    e.target.value = 'select';
+                    const genreMovie = () => navigate(str);
+                    console.log(genres);
+                    genreMovie();
+                }
             }}>
+                <option className={css.opt} value="select">Genres</option>
                 <option className={css.opt} value="null">All genres</option>
                 {genres?.map(genre => <option className={css.opt} key={genre.id}
                                               value={genre.id}>{genre.name}</option>)}

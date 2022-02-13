@@ -34,6 +34,8 @@ const genreSlice = createSlice(
             [getAllGenres.fulfilled]: (state, action) => {
                 state.status = 'pending'
                 state.genres = action.payload
+                console.log(action.payload);
+                sessionStorage.setItem('genres', JSON.stringify(action.payload));
             },
             [getAllGenres.rejected]: (state, action) => {
                 state.status = 'pending'

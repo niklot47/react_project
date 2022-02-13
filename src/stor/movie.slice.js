@@ -39,7 +39,7 @@ export const searchMovieThunk = createAsyncThunk(
 )
 
 export const getMovieByGenreThunk = createAsyncThunk(
-    'movieSlice/getAllMovie',
+    'movieSlice/getMovieByGenreThunk',
     async (genres, page) => {
         try {
             const movies = await movieService.getMovieByGenres(genres, page)
@@ -68,7 +68,7 @@ const movieSlice = createSlice(
                 state.error = null;
             },
             [getAllMovie.fulfilled]: (state, action) => {
-                state.status = 'fulfilled'
+                state.status = 'fulfilledAll'
                 state.pages = action.payload.total_pages>500?500:action.payload.total_pages
                 state.movies = action.payload.results
             },
@@ -83,7 +83,7 @@ const movieSlice = createSlice(
                 state.error = null;
             },
             [searchMovieThunk.fulfilled]: (state, action) => {
-                state.status = 'fulfilled';
+                state.status = 'fulfilledSearch';
                 state.pages = action.payload.total_pages>500?500:action.payload.total_pages
                 state.movies = action.payload.results;
             },
@@ -98,7 +98,7 @@ const movieSlice = createSlice(
                 state.error = null;
             },
             [getMovieByGenreThunk.fulfilled]: (state, action) => {
-                state.status = 'fulfilled';
+                state.status = 'fulfilledGenre';
                 state.pages = action.payload.total_pages>500?500:action.payload.total_pages
                 state.movies = action.payload.results;
             },

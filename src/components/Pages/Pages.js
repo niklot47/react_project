@@ -2,6 +2,13 @@ import React from 'react';
 
 import css from './Pages.module.css'
 
+export const backToFirstPage = (flag, setPage) => {
+    if (sessionStorage.getItem('flagForPages') !== flag) {
+        sessionStorage.setItem('flagForPages', flag)
+        setPage(1);
+    }
+}
+
 const Pages = ({page, setPage, pages}) => {
     return (
         <div className={css.pages}>

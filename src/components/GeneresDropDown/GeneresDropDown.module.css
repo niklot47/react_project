@@ -12,5 +12,12 @@
 }
 
 .opt{
-    background-color: var(--bg-color-4);
+    background-color: var(--bg-color-2);
 }
+
+.genre select:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+

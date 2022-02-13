@@ -13,10 +13,10 @@ function App() {
         <>
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
+                    <Route index element={<HomePage/>}/>
                     <Route path={'main/:search/:genres'} element={<MovieList/>}/>
-                    <Route path={'user'} element={<UserPage/>}/>
-                    <Route path={'home'} element={<HomePage/>}/>
                     <Route path={'movie/:id'} element={<MovieDetails/>}/>
+                    <Route path={'user'} element={<UserPage/>}/>
                     <Route path={'*'} element={<NotFound/>}/>
                 </Route>
             </Routes>

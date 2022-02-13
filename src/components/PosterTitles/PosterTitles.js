@@ -1,20 +1,22 @@
 import React from "react";
 import {Link, useNavigate} from "react-router-dom";
 
-import css from "./Poster.module.css";
+import css from "./PosterTitles.module.css";
 import {imgUrl} from "../../config/imgUrl";
-import noimg from "../../img/noimg.png";
+import img_placeholder from "../../img/img_placeholder.png";
 import MovieListCard from "../MovieListCard/MovieListCard";
 import PosterLarge from "../PosterLarge/PosterLarge";
+import {setBgImg} from "../../config/palette/colors";
 
-const Poster = ({topMovie}) => {
+const PosterTitles = ({topMovie}) => {
     let movie = {...topMovie[0]}
     const navigate = useNavigate();
+    setBgImg(imgUrl.backdrop_sizes.original + movie.poster_path);
 
     return (
         <div className={css.all}>
             <img className={css.poster}
-                 src={movie.poster_path !== undefined ? imgUrl.backdrop_sizes.original + movie.poster_path : noimg}
+                 src={movie.poster_path !== undefined ? imgUrl.backdrop_sizes.original + movie.poster_path : img_placeholder}
                  alt="poster"/>
             <div className={css.content}>
                 <PosterLarge movieToPoster={movie}/>
@@ -37,4 +39,4 @@ const Poster = ({topMovie}) => {
     );
 };
 
-export default Poster;
+export default PosterTitles;

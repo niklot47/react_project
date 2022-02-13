@@ -5,15 +5,18 @@ import ReactStars from "react-stars";
 import css from './MovieDetails.module.css'
 import {imgUrl} from "../../config/imgUrl";
 import {movieService} from "../../services/movie.service";
-import noimg from "../../img/noimg.png";
+import img_placeholder from "../../img/img_placeholder.png";
 import SimilarMovie from "../../components/SimilarMovie/SimilarMovie";
 import SameGenres from "../../components/SameGenres/SameGenres";
+import {scrollOutletTo} from "../../components/Layout/Layout";
+import GenreBadge from "../../components/GenreBadge/GenreBadge";
 
 const MovieDetails = () => {
     const {id} = useParams()
     const [movie, setMovie] = useState(null);
     const navigate = useNavigate();
 
+    scrollOutletTo(0);
 
     useEffect(() => {
         movieService.getMovieById(id).then(value => {
@@ -33,7 +36,7 @@ const MovieDetails = () => {
             {!movie || <div className={css.main}>
                 <div>
                     <img className={css.poster}
-                         src={movie.poster_path ? imgUrl.poster_sizes.w780 + movie.poster_path : noimg} alt="poster"/>
+                         src={movie.poster_path ? imgUrl.poster_sizes.w780 + movie.poster_path : img_placeholder} alt="poster"/>
                 </div>
                 <div className={css.details}>
                     <div className={css.info}>
@@ -71,10 +74,12 @@ const MovieDetails = () => {
                         </div>
                         <div>
                             <b>Genres:</b>
+                            <div className={css.genres}>
                             {
-                                movie.genres.map(genre => <a href="#" onClick={()=>toGenre(genre.id)} key={genre.id}
-                                                               className={css.country}>{genre.name}</a>)
+
+                                movie.genres.map(genre => <GenreBadge id={genre.id} key={genre.id}/>)
                             }
+                            </div>
                         </div>
                         <div>
                             <div>

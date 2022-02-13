@@ -14,8 +14,8 @@ const SearchMovie = () => {
     return (
         <div>
             <form onSubmit={searchMovies} className={css.search}>
-                <input type="text" onChange={(e) => setSearchKey(e.target.value)}/>
-                <NavLink to={'/main/'+searchKey+'/null'}><button type={'submit'}>Search</button></NavLink>
+                <input type="text" onChange={(e) => {setSearchKey(e.target.value)}}/>
+                <NavLink to={'/main/'+(searchKey===''?"search_undefined":searchKey)+'/null'}><button type={'submit'}>Search</button></NavLink>
             </form>
         </div>
     );

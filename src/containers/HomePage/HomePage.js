@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 import css from './HomePage.module.css'
 import MovieListCard from "../../components/MovieListCard/MovieListCard";
-import Poster from "../../components/Poster/Poster";
+import PosterTitles from "../../components/PosterTitles/PosterTitles";
 import {movieService} from "../../services/movie.service";
 import {getAllMovie} from "../../stor";
 
@@ -28,7 +28,7 @@ const HomePage = () => {
             <div>
                 <div className={css.poster}>
                     {
-                        <Poster topMovie={movies.slice(0,4)}/>
+                        <PosterTitles topMovie={movies.slice(0,4)}/>
                     }
                 </div>
 
